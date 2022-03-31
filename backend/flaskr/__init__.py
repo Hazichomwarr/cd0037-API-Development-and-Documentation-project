@@ -27,6 +27,8 @@ def create_app(test_config=None):
     app = Flask(__name__)
     setup_db(app)
 
+    app.config['SECRET_KEY'] = "secretword"
+    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False 
     """
     @TODO: Set up CORS. Allow '*' for origins. Delete the sample route after completing the TODOs
     """
